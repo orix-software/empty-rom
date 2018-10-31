@@ -18,7 +18,7 @@ TELESTRAT_TARGET_RELEASE=release/telestrat
 MYDATE = $(shell date +"%Y-%m-%d %H:%m")
  
 build: $(SOURCE)
-	$(AS) $(CFLAGS) $(SOURCE) -o $($ROM).ld65
+	$(AS) $(CFLAGS) $(SOURCE) -o $(ROM).ld65
 	$(LD) -tnone $(ROM).ld65 -o $(ROM).rom
 
 test:

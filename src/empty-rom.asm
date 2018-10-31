@@ -30,10 +30,10 @@ ROMDEF:
 
 ; ----------------------------------------------------------------------------
 ; RESET
-teleass_reset:
-        .addr   CA65_start
+rom_reset:
+        .addr   rom_start
 ; ----------------------------------------------------------------------------
 ; IRQ Vector
 teleass_irq_vector:
-        .addr   $02FA
+        .addr   IRQVECTOR ; from telestrat.inc (cc65)
 end:
