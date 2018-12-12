@@ -57,6 +57,6 @@ rom_reset:
         .addr   rom_start
 ; ----------------------------------------------------------------------------
 ; IRQ Vector
-empty-rom_irq_vector:
+empty_rom_irq_vector:
         .addr   IRQVECTOR ; from telestrat.inc (cc65)
 end:
