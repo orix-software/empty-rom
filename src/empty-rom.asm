@@ -1,5 +1,6 @@
 .include   "telestrat.inc"
 .include   "fcntl.inc"
+.include   "build.inc"
 
 userzp := $80 ; FIXME
 
@@ -10,7 +11,7 @@ rom_start:
         rts
 
 rom_signature:
-	.ASCIIZ   "Empty rom V0.1 - __DATEBUILT__"
+	.ASCIIZ   "Empty rom V0.2 - __DATEBUILT__"
 
 _command1:
         rts
@@ -25,15 +26,18 @@ commands_address:
         .addr _command1
 commands_version:
         .ASCIIZ "0.0.1"
-
+parse_routine:
 
 
 	
 ; ----------------------------------------------------------------------------
 ; Copyrights address
 
-        .res $FFF3-*
-        .org $FFF3
+        .res $FFF1-*
+        .org $FFF1
+; $fff1
+parse_vector:
+        .addr parse_routine        
 ; fff3
 adress_commands:
         .addr commands_address   
