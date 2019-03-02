@@ -11,7 +11,7 @@ rom_start:
         rts
 
 rom_signature:
-	.ASCIIZ   "Empty rom V0.2 - __DATEBUILT__"
+	.ASCIIZ   "Empty rom V0.2 - __DATE__"
 
 _command1:
         rts
