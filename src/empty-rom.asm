@@ -19,7 +19,6 @@ _command1:
 command1_str:
         .ASCIIZ "command1"
 
-
 commands_text:
         .addr command1_str
 commands_address:
@@ -27,6 +26,20 @@ commands_address:
 commands_version:
         .ASCIIZ "0.0.1"
 parse_routine:
+        ; A & Y contains the string to execute
+        ; for example, if you want to execute the program hello in your rom :
+        ; exec hello
+        ; exec command will call your "parse_routine" with "hello" string pointer in A & Y 
+        ; BUFEDT contains your command without exec word
+        ; if you want to call any program in your rom, you can do :
+        ; lda #<mystring_to_execute ; mystring_to_execute must be in ram because rom which contains the command needs to access  this string in order execute it
+        ; lda #>mystring_to_execute
+        ; BRK_ORIX($63)
+        ; 
+        ; To test your command
+        ; Type :
+        ; exec mycommand
+        rts
 
 
 	
