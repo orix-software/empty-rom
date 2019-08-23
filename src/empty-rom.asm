@@ -56,7 +56,7 @@ adress_commands:
         .addr commands_address   
 ; fff5        
 list_commands:
-        .addr commands_text        
+        .addr command1_str
 ; $fff7
 number_of_commands:
         .byt 1
