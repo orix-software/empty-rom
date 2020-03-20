@@ -35,7 +35,7 @@ commands_version:
         .org $FFF1
 ; $fff1
 parse_vector:
-        .addr parse_routine        
+        .byt $00,$00
 ; fff3
 adress_commands:
         .addr commands_address   
