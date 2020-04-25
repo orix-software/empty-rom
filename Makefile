@@ -37,7 +37,7 @@ test:
 	cp $(ROM).rom build/usr/share/emptyrom/
 	export ORIX_PATH=`pwd`
 	cd build && tar -c * > ../$(ROM).tar &&	cd ..
-	filepack  $(ORIX).tar $(ROM).pkg
+	filepack  $(ROM).tar $(ROM).pkg
 	gzip $(ROM).tar
 	mv $(ROM).tar.gz $(ROM).tgz
 	php buildTestAndRelease/publish/publish2repo.php $(ORIX_ROM).tgz ${hash} 6502 tgz $(RELEASE)
