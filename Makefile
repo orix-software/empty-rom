@@ -17,7 +17,7 @@ SOURCE=src/empty-rom.asm
 TELESTRAT_TARGET_RELEASE=release/telestrat
 MYDATE = $(shell date +"%Y-%m-%d %H:%m")
 
-ifdef $(TRAVIS_BRANCH)
+ifdef TRAVIS_BRANCH
 ifeq ($(TRAVIS_BRANCH), master)
 RELEASE:=$(shell cat VERSION)
 RELEASE:=$(shell echo RELEASE master)
