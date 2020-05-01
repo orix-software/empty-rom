@@ -20,10 +20,8 @@ MYDATE = $(shell date +"%Y-%m-%d %H:%m")
 ifdef TRAVIS_BRANCH
 ifeq ($(TRAVIS_BRANCH), master)
 RELEASE:=$(shell cat VERSION)
-RELEASE:=$(shell echo RELEASE master)
 else
 RELEASE=alpha
-RELEASE:=$(shell echo RELEASE alpha)
 endif
 endif
 
@@ -42,7 +40,6 @@ test:
 	filepack  $(ROM).tar $(ROM).pkg
 	gzip $(ROM).tar
 	mv $(ROM).tar.gz $(ROM).tgz
-	echo Branch $(TRAVIS_BRANCH) Release   $(RELEASE)
 	php buildTestAndRelease/publish/publish2repo.php $(ROM).tgz ${hash} 6502 tgz $(RELEASE)
 
   
