@@ -42,6 +42,7 @@ test:
 	filepack  $(ROM).tar $(ROM).pkg
 	gzip $(ROM).tar
 	mv $(ROM).tar.gz $(ROM).tgz
+	echo Branch $(TRAVIS_BRANCH) Release   $(RELEASE)
 	php buildTestAndRelease/publish/publish2repo.php $(ROM).tgz ${hash} 6502 tgz $(RELEASE)
 
   
