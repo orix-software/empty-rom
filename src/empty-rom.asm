@@ -11,7 +11,7 @@ rom_start:
         rts
 
 rom_signature:
-	.ASCIIZ   "Empty rom v2020.1"
+	.ASCIIZ   "Empty rom v2021.2"
 
 _command1:
         rts
@@ -31,8 +31,16 @@ commands_version:
 ; ----------------------------------------------------------------------------
 ; Copyrights address
 
-        .res $FFF1-*
-        .org $FFF1
+        .res $FFF0-*
+        .org $FFF0
+; $fff0
+; $00 : empty ROM
+; $01 : command ROM
+; $02 : TMPFS
+; $03 : Drivers
+; $04 : filesystem drivers
+type_of_rom:
+.byt $00        
 ; $fff1
 parse_vector:
         .byt $00,$00
