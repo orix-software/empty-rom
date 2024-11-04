@@ -11,7 +11,7 @@ rom_start:
         rts
 
 rom_signature:
-	.ASCIIZ   "Empty rom v2021.2"
+	.ASCIIZ   "Empty rom v2024.4"
 
 _command1:
         rts
