@@ -1,6 +1,6 @@
 .include   "telestrat.inc"
 .include   "fcntl.inc"
-.include   "build.inc"
+
 
 userzp := $80 ; FIXME
 
