@@ -11,20 +11,20 @@ rom_start:
         rts
 
 rom_signature:
-	.ASCIIZ   "Empty rom v2024.4"
+	.asciiz   "Empty rom v2024.4"
 
 _command1:
         rts
 
 command1_str:
-        .ASCIIZ "command1"
+        .asciiz "command1"
 
 commands_text:
         .addr command1_str
 commands_address:
         .addr _command1
 commands_version:
-        .ASCIIZ "0.0.1"
+        .asciiz "0.0.1"
 
 ; ----------------------------------------------------------------------------
 ; Copyrights address
