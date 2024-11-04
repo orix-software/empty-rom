@@ -44,8 +44,8 @@ parse_vector:
         .byt $00,$00
 ; fff3
 adress_commands:
-        .addr commands_address   
-; fff5        
+        .addr commands_address
+; fff5
 list_commands:
         .addr command1_str
 ; $fff7
