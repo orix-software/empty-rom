@@ -26,8 +26,6 @@ commands_address:
 commands_version:
         .ASCIIZ "0.0.1"
 
-
-	
 ; ----------------------------------------------------------------------------
 ; Copyrights address
 
@@ -40,7 +38,7 @@ commands_version:
 ; $03 : Drivers
 ; $04 : filesystem drivers
 type_of_rom:
-.byt $00        
+.byt $00
 ; $fff1
 parse_vector:
         .byt $00,$00
@@ -58,7 +56,7 @@ signature_address:
 
 ; ----------------------------------------------------------------------------
 ; Version + ROM Type
-ROMDEF: 
+ROMDEF:
         .addr rom_start
 
 ; ----------------------------------------------------------------------------
